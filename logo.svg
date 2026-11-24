@@ -1,25 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#8b6cff"/>
-      <stop offset="0.55" stop-color="#5b7cff"/>
-      <stop offset="1" stop-color="#2fb7ff"/>
+      <stop offset="0" stop-color="#7c5cff"/>
+      <stop offset=".55" stop-color="#4f6bff"/>
+      <stop offset="1" stop-color="#19b4ff"/>
     </linearGradient>
-    <linearGradient id="shine" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#fff" stop-opacity=".35"/>
-      <stop offset=".5" stop-color="#fff" stop-opacity="0"/>
+    <radialGradient id="glow" cx=".28" cy=".2" r=".9">
+      <stop offset="0" stop-color="#fff" stop-opacity=".30"/>
+      <stop offset=".55" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#dfe9ff"/>
     </linearGradient>
   </defs>
-  <rect x="64" y="64" width="896" height="896" rx="216" fill="url(#bg)"/>
-  <rect x="64" y="64" width="896" height="896" rx="216" fill="url(#shine)"/>
-  <!-- кадр плёнки -->
-  <rect x="232" y="276" width="420" height="472" rx="64" fill="#fff" fill-opacity=".96"/>
-  <g fill="#6a72ff">
-    <rect x="270" y="318" width="44" height="44" rx="12"/><rect x="270" y="414" width="44" height="44" rx="12"/>
-    <rect x="270" y="510" width="44" height="44" rx="12"/><rect x="270" y="606" width="44" height="44" rx="12"/>
-  </g>
-  <rect x="350" y="318" width="262" height="388" rx="36" fill="#5b7cff" fill-opacity=".18"/>
-  <!-- стрелка «переименовать» -->
-  <path d="M560 512h170" stroke="#fff" stroke-width="72" stroke-linecap="round"/>
-  <path d="M680 418l112 94-112 94" fill="none" stroke="#fff" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="48" y="48" width="928" height="928" rx="228" fill="url(#bg)"/>
+  <rect x="48" y="48" width="928" height="928" rx="228" fill="url(#glow)"/>
+  <!-- кольцо слежки: почти замкнутый круг со стрелкой -->
+  <path d="M766.2 448.6 A262 262 0 1 1 548.5 252.5" fill="none" stroke="url(#ring)" stroke-width="74" stroke-linecap="round"/>
+  <path d="M673.3 305.5 L534.0 355.5 L562.9 149.6 Z" fill="#fff" stroke="#fff" stroke-width="34" stroke-linejoin="round"/>
+  <!-- серия -->
+  <path d="M418.0 362.0 L679.0 512.0 L418.0 662.0 Z" fill="#fff" stroke="#fff" stroke-width="56" stroke-linejoin="round"/>
 </svg>
